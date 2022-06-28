@@ -6,19 +6,11 @@ body {
   min-width: 550px;
   color: #00FA9A;
   background: #0a0a0a;
-  font-family: Monospace;
+  font-family: "Courier New", monospace;
 	overflow-x: hidden;
 	font-size: 9px;
 }
 
-::selection {
-  color: #DCDCCC;
-  background-color: #519975;
-}
-::-moz-selection {
-  color: #DCDCCC;
-  background-color: #519975;
-}
 textarea {
   left: -1000px;
   position: absolute;
@@ -29,22 +21,24 @@ b {
 }
 /* Cursor Start */
 .cursor {
+	background:#00FA9A;
   color: #00FA9A;
   position: relative;
   opacity: 1;
-  height: 1.5em;
-  width: 20px;
-  max-width: 20px;
-  transform: translateY(4px);
+  height: 1.3em;
+  width: 8px;
+  max-width: 8px;
+	/* Move cursor down to line up with characters */
+  transform: translateY(2px);
   overflow: hidden;
-  text-indent: -5px;
+  text-indent: -4px;
   display: inline-block;
   text-decoration: blink;
   animation: blinker 1s linear infinite;
 }
 @keyframes blinker {
   50% {
-    opacity: 0;
+    opacity: 0%;
   }
 }
 #command {
@@ -118,7 +112,6 @@ p {
 .command {
 	font-size: 16px;
   color: #d4d63a;
-  text-shadow: 0 0 5px #73ABAD; 
 }
 .error {
 	font-size: 16px;
